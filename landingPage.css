@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    z-index: 1;
+    margin-bottom: auto;
+}
+
+.banner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    top: 0px;
+    right: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 0.5s;
+}
+
+.logo{
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toggle{
+    background: url("./Images/menu.png");
+    width: 60px;
+    height: 60px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-position: center;
+}
+
+video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    background-position: center;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: linear-gradient(to left, blue, red);
+    mix-blend-mode: overlay;
+}
+
+.sampleText{
+    position: absolute;
+    color: white;
+    width: 100%;
+    padding: 0 100px;
+}
+
+.sampleText h2{
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1em;
+}
+
+.sampleText h3{
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.sampleText p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 20px 0;
+    max-width: 600px;
+}
+
+.sampleText a{
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.sampleText a:hover, .sampleText a:focus, .sampleText a:active{
+    background-color: rgb(39, 189, 226);
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.links{
+    position: absolute;
+    display: flex;
+    list-style: none;
+    filter: invert(1);
+    align-items: center;
+    bottom: 30px;
+    transform-origin: left;
+    left: 100px;
+    transform: scale(0.5);
+}
+
+.links a{
+    margin-right: 20px;
+}
+
+.menu{
+    position: fixed;
+    right: 0px;
+    display: flex;
+    width: 250px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 1);
+}
+
+.menu ul{
+    list-style: none;
+}
+
+.menu ul li{
+    text-align: center;
+}
+
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    outline: none;
+}
+
+.toggle.active{
+    background: url("./Images/close.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-position: center;
+}
+
+.banner.active{
+    right: 250px;
+}
+
+
+@media screen and (min-width: 250px) and (max-width: 300px) and (max-height: 700px){
+    header{
+        padding: 15px 25px;
+    }
+    
+    .logo{
+        font-size: 1.125rem;
+    }
+
+    .toggle{
+        width: 30px;
+        height: 30px;
+        background-size: 15px;
+    }
+
+    .toggle.active{
+        background: url("./Images/close.png");
+        background-size: 10px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        background-position: center;
+    }
+
+    .sampleText{
+        padding: 0 25px;
+    }
+
+    .sampleText h2{
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 1em;
+    }
+
+    .sampleText h3{
+        font-size: 1.67rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 1em;
+    }
+
+    .sampleText p{
+        font-size: 0.50rem;
+    }
+
+    .links{
+        left: 30px;
+    }
+
+    .sampleText a{
+        width: 100px;
+        padding: 5px 10px;
+    }
+
+    .menu{
+        width: 100px;
+    }
+
+    .menu ul li a{
+        font-size: 1rem;
+    }
+
+    .banner.active{
+        right: 100px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 350px) and (max-height: 600px){
+    header{
+        padding: 10px 25px;
+    }
+
+    .logo{
+        font-size: 1.5rem;
+    }
+
+    .sampleText{
+        padding: 0 30px;
+    }
+
+    .sampleText h2{
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 1em;
+    }
+
+    .sampleText h3{
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 1em;
+    }
+
+    .sampleText p{
+        font-size: 0.60rem;
+    }
+
+    .links{
+        left: 30px;
+    }
+
+    .menu{
+        width: 150px;
+    }
+
+    .banner.active{
+        right: 150px;
+    }
+
+    .sampleText a{
+        width: 120px;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-height: 640px){
+    header{
+        padding: 10px 25px;
+    }
+    .sampleText{
+        padding: 0 25px;
+    }
+
+    .sampleText h2{
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 1em;
+    }
+
+    .sampleText h3{
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 1em;
+    }
+
+    .sampleText p{
+        font-size: 0.75rem;
+    }
+
+    .links{
+        left: 25px;
+    }
+
+    .menu{
+        width: 150px;
+    }
+
+    .banner.active{
+        right: 150px;
+    }
+}
+
+@media screen and (min-width: 370px) and (max-width: 450px) and (max-height: 850px){
+    header{
+        padding: 10px 25px;
+    }
+
+    .logo{
+        font-size: 1.75rem;
+    }
+
+    .sampleText{
+        padding: 0 30px;
+    }
+
+    .sampleText h2{
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 1em;
+    }
+
+    .sampleText h3{
+        font-size: 2.67rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 1em;
+    }
+
+    .sampleText p{
+        font-size: 0.80rem;
+    }
+
+    .links{
+        left: 30px;
+    }
+
+    .menu{
+        width: 150px;
+    }
+
+    .banner.active{
+        right: 150px;
+    }
+}
