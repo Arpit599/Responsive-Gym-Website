@@ -51,6 +51,11 @@ body {
   -webkit-text-fill-color: transparent;
 } */
 
+.navItem a {
+  border-bottom: 2px solid transparent;
+  transition: 0.35s all ease;
+}
+
 .navItem a:hover {
   border-bottom: 2px solid rgb(214, 214, 214);
 }
