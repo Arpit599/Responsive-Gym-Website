@@ -6,12 +6,16 @@
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   height: 100%;
 }
 
 body {
-  height: 300vh;
+  height: 455vh;
   display: flex;
   flex-direction: column;
 }
@@ -47,6 +51,10 @@ body {
   -webkit-text-fill-color: transparent;
 } */
 
+.navItem a:hover {
+  border-bottom: 2px solid rgb(214, 214, 214);
+}
+
 .navMenu {
   list-style: none;
   display: flex;
@@ -61,18 +69,18 @@ body {
 
 .navMenu .navItemBtn .signup {
   position: relative;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   text-decoration: none;
-  padding: 5px 20px;
+  padding: 2px 5px;
   height: 30px;
   border: none;
   outline: none;
-  border-radius: 5px;
-  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  border-radius: 3px;
+  /* background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); */
   color: #fff;
   transition: all 0.3s ease;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
 }
 
 @media screen and (max-width: 960px) {
@@ -155,6 +163,10 @@ body {
     margin: 0;
     padding: 0 0;
   }
+
+  .navMenu .navItemBtn span {
+    text-align: center;
+  }
 }
 
 #animBtn:after {
@@ -167,7 +179,7 @@ body {
   transition: 0.3s all ease;
   background-color: #ff1ead;
   z-index: 99;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 #animBtn:hover:after {
@@ -293,15 +305,27 @@ video {
   position: relative;
   width: 150px;
   display: inline-block;
-  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  /* background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); */
+  background: #e52d27; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #b31217,
+    #e52d27
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b31217,
+    #e52d27
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: white;
   padding: 10px 30px;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 500;
   margin-top: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   text-align: center;
 }

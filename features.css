@@ -1,20 +1,32 @@
-/* =============================About==================================== */
-.main {
-  display: grid;
-  background: #000000;
-  background: linear-gradient(to right, #161616, #000000);
-  padding: 100px 0;
+.features {
+  background: black;
   color: white;
-  grid-template-columns: 1fr 1fr;
+  padding: 100px 0;
 }
 
-.imgContainer {
+.features_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+}
+
+.features_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.features_img--container {
   display: flex;
   justify-content: center;
 }
 
-.imgCard {
-  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+.features_img--card {
+  background: #ff512f;
+  background: -webkit-linear-gradient(to right, #dd2476, #ff512f);
+  background: linear-gradient(to right, #dd2476, #ff512f);
   height: 400px;
   width: 400px;
   display: flex;
@@ -23,21 +35,12 @@
   border-radius: 8px;
 }
 
-.imgCard img {
-  max-width: 90%;
-  max-height: 90%;
-  filter: invert(0);
-}
-
 .fas {
   font-size: 14rem;
 }
 
-.contentContainer {
-  padding: 0 50px;
-}
-.contentContainer h1 {
-  font-size: 2.5rem;
+.features_container h1 {
+  font-size: 2rem;
   background-color: #fe3b6f;
   background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
   background-size: 100%;
@@ -49,9 +52,8 @@
   margin-bottom: 10px;
 }
 
-.contentContainer h2 {
-  font-size: 3.5rem;
-  font-weight: 400;
+.features_container h2 {
+  font-size: 4rem;
   /* background: #ff8177;
   background: -webkit-linear-gradient(to right, #9114ff, #e046ff);
   background: linear-gradient(to right, #8f0eff, #da22ff); */
@@ -72,15 +74,17 @@
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  text-transform: uppercase;
+  font-weight: 400;
 }
 
-.contentContainer p {
+.features_container p {
   margin: 20px 0px;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-#animBtn2 {
-  position: absolute;
+#animBtn3 {
+  position: relative;
   color: white;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -91,13 +95,13 @@
   background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
 }
 
-#animBtn2 span {
+#animBtn3 span {
   font-size: 1.2rem;
   position: relative;
   z-index: 100;
 }
 
-#animBtn2:after {
+#animBtn3:after {
   position: absolute;
   content: "";
   width: 0;
@@ -110,6 +114,6 @@
   border-radius: 3px;
 }
 
-#animBtn2:hover:after {
+#animBtn3:hover:after {
   width: 100%;
 }
