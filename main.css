@@ -1,0 +1,114 @@
+/* =============================About==================================== */
+.main {
+  display: grid;
+  background: #000000;
+  background: linear-gradient(to right, #161616, #000000);
+  padding: 100px 0;
+  color: white;
+  grid-template-columns: 1fr 1fr;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imgCard {
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+  height: 350px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.imgCard img {
+  max-width: 90%;
+  max-height: 90%;
+  filter: invert(0);
+}
+
+.fas {
+  font-size: 14rem;
+}
+
+.contentContainer {
+  padding: 0 50px;
+}
+.contentContainer h1 {
+  font-size: 4rem;
+  background-color: #fe3b6f;
+  background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contentContainer h2 {
+  font-size: 3rem;
+  /* background: #ff8177;
+  background: -webkit-linear-gradient(to right, #9114ff, #e046ff);
+  background: linear-gradient(to right, #8f0eff, #da22ff); */
+  background: #da22ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #9733ee,
+    #da22ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #9733ee,
+    #da22ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.contentContainer p {
+  margin: 20px 0px;
+}
+
+#animBtn2 {
+  position: absolute;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  background-size: 100%;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+}
+
+#animBtn2 span {
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 100;
+}
+
+#animBtn2:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s all ease;
+  background-color: #ff1ead;
+  z-index: 99;
+  border-radius: 5px;
+}
+
+#animBtn2:hover:after {
+  width: 100%;
+}
